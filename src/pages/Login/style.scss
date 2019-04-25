@@ -1,0 +1,21 @@
+.login-area {
+	display:flex;
+	flex-direction:row;
+	min-height: 100vh;
+}
+.login-form {
+	max-width:400px;
+	flex: 1;
+	padding:150px 50px 0px 50px;
+}
+.login-banner {
+	flex:1;
+	background-image:url("assets/bg.png");
+	background-size: cover;
+}
+.login-info {
+	color: #555;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}

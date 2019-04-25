@@ -1,0 +1,49 @@
+.login-field {
+	padding: 15px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 10px #DDD;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: text;
+    transition: all 0.5s;
+    display:flex;
+    flex-direction: column;
+    height:70px;
+
+	label {
+		display:flex;
+		color:#999;
+		font-size:14px;
+		cursor: text;
+		flex:1;
+		align-items: center;
+		transition: all 0.5s;
+	}
+
+	input {
+		height:0;
+		display:block;
+		color:#000;
+		font-size:14px;
+		font-weight:bold;
+		outline:0;
+		border:0;
+		background-color:#FFF;
+		cursor: text;
+		width:100%;
+		transition: all 0.5s;
+	}
+
+}
+.login-field.on {
+
+	label {
+		font-size:11px;
+		color:#CCC;
+	}
+
+	input {
+		height:40px;
+	}
+
+}

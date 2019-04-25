@@ -7,6 +7,11 @@ function html() {
 		.pipe(dest('public/'));
 }
 
+function assets() {
+	return src('src/assets/*.png')
+		.pipe(dest('public/assets/'));
+}
+
 function htaccess() {
 	return src('src/.htaccess')
 		.pipe(dest('public/'));
@@ -35,17 +40,24 @@ function js() {
 			            test: /\.scss$/,
 			            use: [
 			                "style-loader",
-			                "css-loader",
+			                {loader:'css-loader', options:{url:false}},
 			                "sass-loader"
 			            ]
-			        }
+			        },
+			        {
+						test: /\.(jpe?g|png|gif|svg)$/i,
+						use: [
+							'url-loader?limit=10000',
+							'img-loader'
+						]
+					}
 				]
 			}
 		}))
 		.pipe(dest('public/'));
 }
 
-exports.default = parallel(htaccess, html, js);
+exports.default = parallel(htaccess, html, assets, js);
 
 
 

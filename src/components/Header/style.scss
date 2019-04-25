@@ -1,15 +1,20 @@
+* { box-sizing: border-box; }
+
+body {
+  margin:0;
+  background-color:#f7f7f7;
+  font-family:Helvetica, Arial;
+}
+
 header {
-  background-color:#CCC;
 
-  ul {
-  	list-style:none;
-  	margin:0;
-  	padding:0;
-
-  	li {
-  		display:inline-block;
-  		padding:10px;
-  	}
+  position:absolute;
+  left:50px;
+  top:0;
+  z-index:9999;
+  
+  .logo {
+    height:100px;
   }
 
 }
